@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pt.up.fe.comp.cpf.Cpf3_Ollir" tests="17" skipped="0" failures="0" errors="0" timestamp="2022-06-15T19:01:02" hostname="ubntu" time="0.169">
+  <properties/>
+  <testcase name="section1_Basic_BasicImports_Package" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.01"/>
+  <testcase name="section3_ControlFlow_While_Simple" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.01"/>
+  <testcase name="section4_Calls_Invoke_Virtual" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.011"/>
+  <testcase name="section4_Calls_SetInlineAndPrintOtherClassFromParam" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.013"/>
+  <testcase name="section3_ControlFlow_If_Simple_Single_goto" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.009"/>
+  <testcase name="section4_Calls_Invoke_Static" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.008"/>
+  <testcase name="section3_ControlFlow_If_Switch" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.013"/>
+  <testcase name="section2_Arithmetic_Simple_and" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.009"/>
+  <testcase name="section2_Arithmetic_Simple_div" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.008"/>
+  <testcase name="section5_Arrays_Load_ComplexArrayAccess" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.015"/>
+  <testcase name="section1_Basic_Structure_main" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.007"/>
+  <testcase name="section2_Arithmetic_Simple_less" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.011"/>
+  <testcase name="section1_Basic_Method_Declaration_Array" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.01"/>
+  <testcase name="section1_Basic_Method_Declaration_Class" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.008"/>
+  <testcase name="section5_Arrays_Init_Array" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.008"/>
+  <testcase name="section1_Basic_Structure_fields_int_arr" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.007"/>
+  <testcase name="section5_Arrays_Access_Array" classname="pt.up.fe.comp.cpf.Cpf3_Ollir" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

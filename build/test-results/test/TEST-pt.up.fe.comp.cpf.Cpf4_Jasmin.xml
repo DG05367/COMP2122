@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pt.up.fe.comp.cpf.Cpf4_Jasmin" tests="48" skipped="0" failures="1" errors="0" timestamp="2022-06-15T19:01:02" hostname="ubntu" time="1.732">
+  <properties/>
+  <testcase name="section4_Calls_Misc_ArithmeticArgs" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.075"/>
+  <testcase name="section1_Basic_Structure_superclass" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.01"/>
+  <testcase name="section4_Calls_Misc_OneArg" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.072"/>
+  <testcase name="section3_ControlFlow_While_Simple" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.051"/>
+  <testcase name="section2_Arithmetic_Complex_Add" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.068"/>
+  <testcase name="section4_Calls_Invoke_Virtual" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.011"/>
+  <testcase name="section3_ControlFlow_Mixed_Nested" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.05"/>
+  <testcase name="section5_Arrays_Signature_ArrayAsArg" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.01"/>
+  <testcase name="section3_ControlFlow_Mixed_Switch" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.059"/>
+  <testcase name="section4_Calls_Misc_VarArgs" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.055"/>
+  <testcase name="section4_Calls_SetInlineAndPrintOtherClassInline" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.052"/>
+  <testcase name="section2_Arithmetic_Complex_AddMul" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.051"/>
+  <testcase name="section1_Basic_Method_Declaration_Int" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.009"/>
+  <testcase name="section1_Basic_Structure_constructor" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.01"/>
+  <testcase name="section2_Arithmetic_BytecodeIndex_IstoreVar" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.01"/>
+  <testcase name="section4_Calls_Misc_FunctionArgs" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.05"/>
+  <testcase name="section1_Basic_Structure_fields_boolean" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.01"/>
+  <testcase name="section6_Limits_Locals_Not_99" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.014"/>
+  <testcase name="section4_Calls_Invoke_Static" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.01"/>
+  <testcase name="section2_Arithmetic_Complex_SubDiv" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.051"/>
+  <testcase name="section6_Limits_Locals_Simple" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.01">
+    <failure message="java.lang.AssertionError: Expected code to match /(a|i)(store|load)(_|\s+)8/ in the following code:&#10;&#10;(II)I&#10;.limit locals 9&#10;.limit stack 3&#10;aload_0&#10;iconst_3&#10;iconst_4&#10;invokevirtual LocalLimits.func(II)I&#10;istore_3&#10;iconst_3&#10;iload_3&#10;iadd&#10;istore 4&#10;bipush 10&#10;iload 4&#10;imul&#10;istore 5&#10;iload_2&#10;iload 5&#10;iadd&#10;istore_1&#10;aload_0&#10;iconst_3&#10;iconst_4&#10;invokevirtual LocalLimits.func(II)I&#10;istore 6&#10;iconst_1&#10;istore 7&#10;iload 7&#10;ireturn&#10;" type="java.lang.AssertionError">java.lang.AssertionError: Expected code to match /(a|i)(store|load)(_|\s+)8/ in the following code:
+
+(II)I
+.limit locals 9
+.limit stack 3
+aload_0
+iconst_3
+iconst_4
+invokevirtual LocalLimits.func(II)I
+istore_3
+iconst_3
+iload_3
+iadd
+istore 4
+bipush 10
+iload 4
+imul
+istore 5
+iload_2
+iload 5
+iadd
+istore_1
+aload_0
+iconst_3
+iconst_4
+invokevirtual LocalLimits.func(II)I
+istore 6
+iconst_1
+istore 7
+iload 7
+ireturn
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at pt.up.fe.comp.CpUtils.matches(CpUtils.java:442)
+	at pt.up.fe.comp.CpUtils.matches(CpUtils.java:437)
+	at pt.up.fe.comp.cpf.Cpf4_Jasmin.section6_Limits_Locals_Simple(Cpf4_Jasmin.java:447)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="section2_Arithmetic_Complex_Prod" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.071"/>
+  <testcase name="section3_ControlFlow_If_Not_Simple" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.051"/>
+  <testcase name="section3_ControlFlow_If_Simple" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.088"/>
+  <testcase name="section1_Basic_Method_Declaration_Boolean" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.013"/>
+  <testcase name="section2_Arithmetic_Simple_add" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.078"/>
+  <testcase name="section2_Arithmetic_Simple_and" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.055"/>
+  <testcase name="section2_Arithmetic_Simple_div" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.046"/>
+  <testcase name="section2_Arithmetic_Simple_mul" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.06"/>
+  <testcase name="section2_Arithmetic_Simple_sub" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.047"/>
+  <testcase name="section6_Limits_Stack_Not_99" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.012"/>
+  <testcase name="section6_Limits_Stack_Simple" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.014"/>
+  <testcase name="section1_Basic_Structure_fields_int" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.008"/>
+  <testcase name="section5_Arrays_As_Arg_Simple" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.062"/>
+  <testcase name="section5_Arrays_Load_ComplexArrayAccess" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.065"/>
+  <testcase name="section1_Basic_Structure_main" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.009"/>
+  <testcase name="section1_Basic_Structure_class" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.007"/>
+  <testcase name="section4_Calls_Misc_ConditionArgs" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.05"/>
+  <testcase name="section5_Arrays_As_Arg_Aload" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.013"/>
+  <testcase name="section2_Arithmetic_Complex_Arithmetic" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.051"/>
+  <testcase name="section2_Arithmetic_Simple_less" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.051"/>
+  <testcase name="section1_Basic_Method_Declaration_Array" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.008"/>
+  <testcase name="section1_Basic_Method_Declaration_Class" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.008"/>
+  <testcase name="section5_Arrays_Init_Array" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.044"/>
+  <testcase name="section5_Arrays_Store_Array" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.054"/>
+  <testcase name="section2_Arithmetic_BytecodeIndex_IloadArg" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.008"/>
+  <testcase name="section1_Basic_Structure_fields_int_arr" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.007"/>
+  <testcase name="section4_Calls_UsesPop" classname="pt.up.fe.comp.cpf.Cpf4_Jasmin" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

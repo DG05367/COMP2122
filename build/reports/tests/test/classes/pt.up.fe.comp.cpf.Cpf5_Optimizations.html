@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class pt.up.fe.comp.cpf.Cpf5_Optimizations</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class pt.up.fe.comp.cpf.Cpf5_Optimizations</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/pt.up.fe.comp.cpf.html">pt.up.fe.comp.cpf</a> &gt; Cpf5_Optimizations</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">22</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">9</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.309s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">59%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="section1_InstSelection_IfLt"></a>
+<h3 class="failures">section1_InstSelection_IfLt</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected code to match /(iflt|ifge)/
+
+Jasmin code:
+.class InstSelection_if_lt
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 3
+.limit stack 2
+iconst_0
+istore_1
+iload_1
+iconst_0
+if_icmpge myTrue0
+iconst_1
+goto myEndIf0
+myTrue0:
+iconst_0
+myEndIf0:
+istore_2
+iload_2
+ifeq else1
+iconst_1
+istore_1
+goto endif1
+else1:
+iconst_2
+istore_1
+endif1:
+return
+.end method
+
+
+No reports
+
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at pt.up.fe.comp.CpUtils.assertTrue(CpUtils.java:232)
+	at pt.up.fe.comp.CpUtils.matches(CpUtils.java:433)
+	at pt.up.fe.comp.CpUtils.matches(CpUtils.java:428)
+	at pt.up.fe.comp.cpf.Cpf5_Optimizations.section1_InstSelection_IfLt(Cpf5_Optimizations.java:117)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="section1_InstSelection_iinc"></a>
+<h3 class="failures">section1_InstSelection_iinc</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected code to match /iinc\s+\w+\s+1/
+
+Jasmin code:
+.class InstSelection_iinc
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 2
+.limit stack 2
+iconst_2
+istore_1
+iload_1
+iconst_1
+iadd
+istore_1
+return
+.end method
+
+
+No reports
+
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at pt.up.fe.comp.CpUtils.assertTrue(CpUtils.java:232)
+	at pt.up.fe.comp.CpUtils.matches(CpUtils.java:433)
+	at pt.up.fe.comp.CpUtils.matches(CpUtils.java:428)
+	at pt.up.fe.comp.cpf.Cpf5_Optimizations.section1_InstSelection_iinc(Cpf5_Optimizations.java:126)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="section2_RegAlloc_AtMostRequestedNumber"></a>
+<h3 class="failures">section2_RegAlloc_AtMostRequestedNumber</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected code to change with -r flag
+
+Original code:
+.class RegAlloc
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public soManyRegisters(I)I
+.limit locals 6
+.limit stack 1
+iconst_0
+istore_2
+iload_2
+istore_3
+iload_3
+istore 4
+iload 4
+istore 5
+iload 5
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+Jasmin code:
+.class RegAlloc
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public soManyRegisters(I)I
+.limit locals 6
+.limit stack 1
+iconst_0
+istore_2
+iload_2
+istore_3
+iload_3
+istore 4
+iload 4
+istore 5
+iload 5
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+No reports
+
+. Actual: .class RegAlloc
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public soManyRegisters(I)I
+.limit locals 6
+.limit stack 1
+iconst_0
+istore_2
+iload_2
+istore_3
+iload_3
+istore 4
+iload 4
+istore 5
+iload 5
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failEquals(Assert.java:185)
+	at org.junit.Assert.assertNotEquals(Assert.java:161)
+	at pt.up.fe.comp.CpUtils.assertNotEquals(CpUtils.java:224)
+	at pt.up.fe.comp.cpf.Cpf5_Optimizations.section2_RegAlloc_AtMostRequestedNumber(Cpf5_Optimizations.java:198)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="section2_RegAlloc_UsesMinimumPossible"></a>
+<h3 class="failures">section2_RegAlloc_UsesMinimumPossible</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected code to change with -r flag
+
+Original code:
+.class RegAlloc
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public soManyRegisters(I)I
+.limit locals 6
+.limit stack 1
+iconst_0
+istore_2
+iload_2
+istore_3
+iload_3
+istore 4
+iload 4
+istore 5
+iload 5
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+Jasmin code:
+.class RegAlloc
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public soManyRegisters(I)I
+.limit locals 6
+.limit stack 1
+iconst_0
+istore_2
+iload_2
+istore_3
+iload_3
+istore 4
+iload 4
+istore 5
+iload 5
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+No reports
+
+. Actual: .class RegAlloc
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public soManyRegisters(I)I
+.limit locals 6
+.limit stack 1
+iconst_0
+istore_2
+iload_2
+istore_3
+iload_3
+istore 4
+iload 4
+istore 5
+iload 5
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failEquals(Assert.java:185)
+	at org.junit.Assert.assertNotEquals(Assert.java:161)
+	at pt.up.fe.comp.CpUtils.assertNotEquals(CpUtils.java:224)
+	at pt.up.fe.comp.cpf.Cpf5_Optimizations.section2_RegAlloc_UsesMinimumPossible(Cpf5_Optimizations.java:232)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="section3_ConstProp_InSequentialCode"></a>
+<h3 class="failures">section3_ConstProp_InSequentialCode</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected code to change with -o flag
+
+Original code:
+.class PropSequential
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo(I)I
+.limit locals 4
+.limit stack 2
+bipush 10
+istore_2
+iload_2
+istore_3
+iload_3
+iload_1
+imul
+istore_2
+iload_2
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+Jasmin code:
+.class PropSequential
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo(I)I
+.limit locals 4
+.limit stack 2
+bipush 10
+istore_2
+iload_2
+istore_3
+iload_3
+iload_1
+imul
+istore_2
+iload_2
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+No reports
+
+. Actual: .class PropSequential
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo(I)I
+.limit locals 4
+.limit stack 2
+bipush 10
+istore_2
+iload_2
+istore_3
+iload_3
+iload_1
+imul
+istore_2
+iload_2
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failEquals(Assert.java:185)
+	at org.junit.Assert.assertNotEquals(Assert.java:161)
+	at pt.up.fe.comp.CpUtils.assertNotEquals(CpUtils.java:224)
+	at pt.up.fe.comp.cpf.Cpf5_Optimizations.section3_ConstProp_InSequentialCode(Cpf5_Optimizations.java:263)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="section3_ConstProp_Simple"></a>
+<h3 class="failures">section3_ConstProp_Simple</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected code to change with -o flag
+
+Original code:
+.class PropSimple
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo()I
+.limit locals 2
+.limit stack 1
+bipush 10
+istore_1
+iload_1
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+Jasmin code:
+.class PropSimple
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo()I
+.limit locals 2
+.limit stack 1
+bipush 10
+istore_1
+iload_1
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+No reports
+
+. Actual: .class PropSimple
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo()I
+.limit locals 2
+.limit stack 1
+bipush 10
+istore_1
+iload_1
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failEquals(Assert.java:185)
+	at org.junit.Assert.assertNotEquals(Assert.java:161)
+	at pt.up.fe.comp.CpUtils.assertNotEquals(CpUtils.java:224)
+	at pt.up.fe.comp.cpf.Cpf5_Optimizations.section3_ConstProp_Simple(Cpf5_Optimizations.java:248)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="section3_ConstProp_WithIf"></a>
+<h3 class="failures">section3_ConstProp_WithIf</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected code to change with -o flag
+
+Original code:
+.class PropWithIf
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo(I)I
+.limit locals 4
+.limit stack 2
+bipush 10
+istore_2
+iload_1
+iload_2
+if_icmpge myTrue0
+iconst_1
+goto myEndIf0
+myTrue0:
+iconst_0
+myEndIf0:
+istore_3
+iload_3
+ifeq else1
+iload_1
+istore_2
+goto endif1
+else1:
+iload_2
+istore_2
+endif1:
+iload_2
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+Jasmin code:
+.class PropWithIf
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo(I)I
+.limit locals 4
+.limit stack 2
+bipush 10
+istore_2
+iload_1
+iload_2
+if_icmpge myTrue0
+iconst_1
+goto myEndIf0
+myTrue0:
+iconst_0
+myEndIf0:
+istore_3
+iload_3
+ifeq else1
+iload_1
+istore_2
+goto endif1
+else1:
+iload_2
+istore_2
+endif1:
+iload_2
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+No reports
+
+. Actual: .class PropWithIf
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo(I)I
+.limit locals 4
+.limit stack 2
+bipush 10
+istore_2
+iload_1
+iload_2
+if_icmpge myTrue0
+iconst_1
+goto myEndIf0
+myTrue0:
+iconst_0
+myEndIf0:
+istore_3
+iload_3
+ifeq else1
+iload_1
+istore_2
+goto endif1
+else1:
+iload_2
+istore_2
+endif1:
+iload_2
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failEquals(Assert.java:185)
+	at org.junit.Assert.assertNotEquals(Assert.java:161)
+	at pt.up.fe.comp.CpUtils.assertNotEquals(CpUtils.java:224)
+	at pt.up.fe.comp.cpf.Cpf5_Optimizations.section3_ConstProp_WithIf(Cpf5_Optimizations.java:293)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="section3_ConstProp_WithLoop"></a>
+<h3 class="failures">section3_ConstProp_WithLoop</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected code to change with -o flag
+
+Original code:
+.class PropWithLoop
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo()I
+.limit locals 5
+.limit stack 2
+bipush 10
+istore_1
+iconst_0
+istore_2
+loop1:
+iload_2
+iload_1
+if_icmpge myTrue0
+iconst_1
+goto myEndIf0
+myTrue0:
+iconst_0
+myEndIf0:
+istore_3
+iload_3
+ifeq endloop1
+iload_2
+iconst_1
+iadd
+istore_2
+goto loop1
+endloop1:
+iload_2
+iload_1
+imul
+istore 4
+iload 4
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+Jasmin code:
+.class PropWithLoop
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo()I
+.limit locals 5
+.limit stack 2
+bipush 10
+istore_1
+iconst_0
+istore_2
+loop1:
+iload_2
+iload_1
+if_icmpge myTrue0
+iconst_1
+goto myEndIf0
+myTrue0:
+iconst_0
+myEndIf0:
+istore_3
+iload_3
+ifeq endloop1
+iload_2
+iconst_1
+iadd
+istore_2
+goto loop1
+endloop1:
+iload_2
+iload_1
+imul
+istore 4
+iload 4
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+
+No reports
+
+. Actual: .class PropWithLoop
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public foo()I
+.limit locals 5
+.limit stack 2
+bipush 10
+istore_1
+iconst_0
+istore_2
+loop1:
+iload_2
+iload_1
+if_icmpge myTrue0
+iconst_1
+goto myEndIf0
+myTrue0:
+iconst_0
+myEndIf0:
+istore_3
+iload_3
+ifeq endloop1
+iload_2
+iconst_1
+iadd
+istore_2
+goto loop1
+endloop1:
+iload_2
+iload_1
+imul
+istore 4
+iload 4
+ireturn
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 1
+.limit stack 0
+return
+.end method
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failEquals(Assert.java:185)
+	at org.junit.Assert.assertNotEquals(Assert.java:161)
+	at pt.up.fe.comp.CpUtils.assertNotEquals(CpUtils.java:224)
+	at pt.up.fe.comp.cpf.Cpf5_Optimizations.section3_ConstProp_WithLoop(Cpf5_Optimizations.java:278)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="section4_WhileTemplate_DoWhile"></a>
+<h3 class="failures">section4_WhileTemplate_DoWhile</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected code to change with -o flag
+
+Original code:
+.class WhileOpt
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 3
+.limit stack 2
+iconst_0
+istore_1
+loop1:
+iload_1
+bipush 10
+if_icmpge myTrue0
+iconst_1
+goto myEndIf0
+myTrue0:
+iconst_0
+myEndIf0:
+istore_2
+iload_2
+ifeq endloop1
+iload_1
+iconst_1
+iadd
+istore_1
+goto loop1
+endloop1:
+return
+.end method
+
+
+Jasmin code:
+.class WhileOpt
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 3
+.limit stack 2
+iconst_0
+istore_1
+loop1:
+iload_1
+bipush 10
+if_icmpge myTrue0
+iconst_1
+goto myEndIf0
+myTrue0:
+iconst_0
+myEndIf0:
+istore_2
+iload_2
+ifeq endloop1
+iload_1
+iconst_1
+iadd
+istore_1
+goto loop1
+endloop1:
+return
+.end method
+
+
+No reports
+
+. Actual: .class WhileOpt
+.super java/lang/Object
+
+.method public &lt;init&gt;()V
+aload_0
+invokespecial java/lang/Object.&lt;init&gt;()V
+return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+.limit locals 3
+.limit stack 2
+iconst_0
+istore_1
+loop1:
+iload_1
+bipush 10
+if_icmpge myTrue0
+iconst_1
+goto myEndIf0
+myTrue0:
+iconst_0
+myEndIf0:
+istore_2
+iload_2
+ifeq endloop1
+iload_1
+iconst_1
+iadd
+istore_1
+goto loop1
+endloop1:
+return
+.end method
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failEquals(Assert.java:185)
+	at org.junit.Assert.assertNotEquals(Assert.java:161)
+	at pt.up.fe.comp.CpUtils.assertNotEquals(CpUtils.java:224)
+	at pt.up.fe.comp.cpf.Cpf5_Optimizations.section4_WhileTemplate_DoWhile(Cpf5_Optimizations.java:310)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">section1_InstSelection_IfLt</td>
+<td class="failures">0.008s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_bipush_127</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_bipush_6</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_iconst_0</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_iconst_5</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">section1_InstSelection_iinc</td>
+<td class="failures">0.009s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_iload_1</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_iload_3</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_iload_4</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_istore_1</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_istore_3</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_istore_4</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_ldc_32768</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_sipush_128</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">section1_InstSelection_sipush_32767</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">section2_RegAlloc_AtMostRequestedNumber</td>
+<td class="failures">0.021s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">section2_RegAlloc_UsesMinimumPossible</td>
+<td class="failures">0.017s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">section3_ConstProp_InSequentialCode</td>
+<td class="failures">0.017s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">section3_ConstProp_Simple</td>
+<td class="failures">0.016s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">section3_ConstProp_WithIf</td>
+<td class="failures">0.021s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">section3_ConstProp_WithLoop</td>
+<td class="failures">0.024s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">section4_WhileTemplate_DoWhile</td>
+<td class="failures">0.026s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4.2</a> at Jun 15, 2022, 8:01:04 PM</p>
+</div>
+</div>
+</body>
+</html>
